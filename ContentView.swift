@@ -1,12 +1,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var myarray = ["Mow the lawn", "Feed the dog", "Grocery Shop"]
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        List(myarray, id: \.self){
+            task in Text(task)
         }
+    
     }
 }
