@@ -6,3 +6,17 @@
 //
 
 import Foundation
+import SwiftUI
+
+struct HeaderView: View {
+    @Binding var tasks: [Task]
+    @State var userinput = ""
+    var body: some View {
+        HStack(){
+            TextField("Enter taks", text: $userinput)
+            Button("Add task to array"){
+                tasks.append(Task(nameOfTask:userinput))
+            }
+        }
+    }
+}
