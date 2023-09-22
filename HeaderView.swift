@@ -13,7 +13,7 @@ struct HeaderView: View {
     @State var userinput = ""
     var body: some View {
         HStack(){
-            TextField("Enter taks", text: $userinput)
+            TextField("Enter tasks", text: $userinput)
             Button("Add task to array"){
                 tasks.append(Task(nameOfTask:userinput))
             }
